@@ -1,33 +1,45 @@
-body, html {
+body {
   margin: 0;
-  padding: 0;
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
   overflow: hidden;
-  font-family: 'Arial', sans-serif;
-  background: #000;
-  color: #fff;
 }
 
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
 
-#countdown-container, #wish-message, #music-box, #photo-container, #proposal-container, #final-message {
+#countdown {
+  font-size: 80px;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+}
+
+#message, #photos, #final {
   position: absolute;
   width: 100%;
-  height: 100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  z-index: 10;
+  top: 30%;
 }
 
 button {
   padding: 15px 30px;
   font-size: 18px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 10px;
+  background: hotpink;
   border: none;
-  background: #ff4081;
-  color: #fff;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#photos img {
+  width: 70%;
+  border-radius: 20px;
+}
+
+video {
+  width: 100%;
+  height: 100%;
 }
