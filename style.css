@@ -50,6 +50,12 @@ body {
   text-align: center;
   padding: 20px;
   max-width: 90%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#wish-message:not(.hidden) {
+  opacity: 1;
 }
 
 #wish-message h1 {
@@ -208,6 +214,9 @@ body {
 
 .hidden {
   display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 @media (max-width: 768px) {
@@ -218,4 +227,4 @@ body {
   #proposal-container::before { font-size: 32px; }
   #proposal-container button { padding: 15px 30px; font-size: 18px; }
   #photo-container img { max-width: 90%; max-height: 300px; }
-}
+  }
