@@ -8,15 +8,10 @@ const photos = [
   'assets/images/photo3.jpg'
 ];
 const videoSrc = 'assets/video/edit.mp4';
-const music = new Howl({ 
-  src: ['assets/audio/background.mp3'], 
-  loop: true,
-  volume: 0.5
-});
+let music;
 let fireworksParticles = [];
 let confettiParticles = [];
-
-const container = document.getElementById('canvas-container');
+let container;
 
 // ---------------- Initialize Three.js Scene ----------------
 function initScene(){
@@ -345,7 +340,18 @@ function animate(){
 }
 
 // ---------------- Initialize Everything ----------------
-initScene();
-loadModels();
-startCountdown();
-animate();
+// Wait for DOM to be fully loaded before running
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize container and music after DOM is loaded
+  container = document.getElementById('canvas-container');
+  music = new Howl({ 
+    src: ['assets/audio/background.mp3'], 
+    loop: true,
+    volume: 0.5
+  });
+  
+  initScene();
+  loadModels();
+  startCountdown();
+  animate();
+});
