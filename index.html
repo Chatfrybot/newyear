@@ -2,58 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>New Year Surprise & Proposal</title>
+  <title>New Year Surprise</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Countdown -->
-  <div id="countdown-container">
-    <div id="countdown">5</div>
-  </div>
+<div id="countdown">5</div>
 
-  <!-- Wish Message -->
-  <div id="wish-message" class="hidden">
-    <h1>
-      Happy New Year to my lovey lady, my Sona! ❤️<br>
-      May this new year bring happiness and joy to your life.
-    </h1>
-  </div>
+<div id="message" class="hidden">
+  <h1>
+    Happy New Year my lovely Sona ❤️<br>
+    May happiness always stay with you
+  </h1>
+  <button id="playMusic">Play Music</button>
+</div>
 
-  <!-- Music Box -->
-  <div id="music-box" class="hidden">
-    <button id="play-music">Play Music 🎵</button>
-  </div>
+<div id="photos" class="hidden"></div>
 
-  <!-- Three.js Canvas -->
-  <div id="canvas-container"></div>
+<video id="video" class="hidden" controls playsinline></video>
 
-  <!-- Photos -->
-  <div id="photo-container" class="hidden"></div>
+<div id="final" class="hidden">
+  <h1>Thanks for choosing me ❤️<br>I love you so much Jaanu</h1>
+</div>
 
-  <!-- Video -->
-  <video id="video-edit" class="hidden" playsinline controls></video>
-
-  <!-- Proposal Buttons -->
-  <div id="proposal-container" class="hidden">
-    <button id="yes-btn">Yes! 💕</button>
-    <button id="no-btn">No</button>
-  </div>
-
-  <!-- Final Message -->
-  <div id="final-message" class="hidden">
-    <h1>Thanks for choosing me ❤️<br>I Love you so much Jaanu</h1>
-  </div>
-
-  <!-- Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-
-  <!-- Your JS Code -->
-  <script src="main.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
