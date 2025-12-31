@@ -1,4 +1,3 @@
-/*
 // Global variables
 let scene, camera, renderer, clock;
 let giftBox, boy, curtains, ring;
@@ -229,4 +228,5 @@ initScene();
 loadModels();
 startCountdown();
 animate();
+
 
