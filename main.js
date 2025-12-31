@@ -1,3 +1,23 @@
+// Global variables
+let scene, camera, renderer, clock;
+let giftBox, boy, curtains, ring;
+let photoIndex = 0;
+const photos = [
+  'assets/images/photo1.jpg',
+  'assets/images/photo2.jpg',
+  'assets/images/photo3.jpg'
+];
+const videoSrc = 'assets/video/edit.mp4';
+const music = new Howl({ 
+  src: ['assets/audio/background.mp3'], 
+  loop: true,
+  volume: 0.5
+});
+let fireworksParticles = [];
+let confettiParticles = [];
+
+const container = document.getElementById('canvas-container');
+
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
@@ -536,3 +556,4 @@ const ProposalExperience = () => {
 };
 
 export default ProposalExperience;
+
