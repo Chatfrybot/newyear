@@ -1,9 +1,4 @@
 /*
-Full 3D New Year + Proposal interactive webpage
-Includes: countdown, fireworks, gift box animation, photos, video, curtains, proposal, ring, hug, confetti
-All assets must be in correct folders: assets/models, assets/images, assets/video, assets/audio, assets/textures
-*/
-
 // Global variables
 let scene, camera, renderer, clock;
 let giftBox, boy, curtains, ring;
@@ -234,3 +229,4 @@ initScene();
 loadModels();
 startCountdown();
 animate();
+
