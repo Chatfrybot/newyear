@@ -147,7 +147,8 @@ function startCountdown(){
 function showWishMessage(){
   const wish = document.getElementById('wish-message');
   wish.classList.remove('hidden');
-  gsap.fromTo(wish,{opacity:0},{opacity:1,duration:2,onComplete:showMusicBox});
+  wish.style.opacity = '0';
+  gsap.to(wish, {opacity:1, duration:2, onComplete:showMusicBox});
 }
 
 // ---------------- Music ----------------
@@ -172,6 +173,9 @@ function showGiftBox(){
 
 // ---------------- Photos Animation ----------------
 function showPhotos(){
+  // Hide wish message before showing photos
+  document.getElementById('wish-message').classList.add('hidden');
+  
   const container = document.getElementById('photo-container');
   container.classList.remove('hidden');
   displayPhoto(photoIndex);
@@ -196,7 +200,9 @@ function displayPhoto(index){
 
 // ---------------- Video ----------------
 function playVideo(){
+  // Hide photos before showing video
   document.getElementById('photo-container').classList.add('hidden');
+  
   const video = document.getElementById('video-edit');
   video.src = videoSrc;
   video.classList.remove('hidden');
